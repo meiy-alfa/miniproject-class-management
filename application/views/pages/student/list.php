@@ -19,7 +19,6 @@
         <table class="table table-striped table-bordered" id="table-student">
             <thead>
                 <tr>
-                    <th width="50px"><center>No</center></th>
                     <th width="100px"><center>NIS</center></th>
                     <th><center>Nama</center></th>
                     <th width="50px"><center>JK</center></th>
@@ -28,12 +27,9 @@
             </thead>
             <tbody>
                 <?php 
-                    $no = 0;
                     foreach ($items as $item) : 
-                    $no++
                 ?>
                     <tr>
-                        <td><center><?= $no ?></center></td>
                         <td><center><?= $item->nis ?></center></td>
                         <td><?= $item->fullname ?></td>
                         <td><center><?= $item->gender ?></center></td>

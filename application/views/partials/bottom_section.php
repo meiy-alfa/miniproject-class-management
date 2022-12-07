@@ -15,7 +15,7 @@
 <!-- menggunakan flugin datatables.net menggunakan ID tabel -->
 <script>
     $('#table-student').DataTable({
-        order: [[2, 'asc']],
+        order: [[1, 'asc']],
     });
 </script>
 
