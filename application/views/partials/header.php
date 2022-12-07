@@ -17,6 +17,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= site_url('year') ?>">Thn-Pelajaran</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('level') ?>">Tingkat</a>
+      </li>
     </ul>
   </div>
 </nav>
