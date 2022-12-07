@@ -23,6 +23,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= site_url('group') ?>">Group</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('classes') ?>">Kelas</a>
+      </li>
     </ul>
   </div>
 </nav>

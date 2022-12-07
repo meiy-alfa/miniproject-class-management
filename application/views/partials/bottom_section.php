@@ -26,6 +26,11 @@
         order: [[2, 'asc'],[3, 'asc']],
     });
 </script>
+<script>
+    $('#table-classes').DataTable({
+        order: [[0, 'desc'],[1, 'asc']],
+    });
+</script>
 
 
 <!-- flugin select2.org -->
