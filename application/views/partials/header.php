@@ -14,6 +14,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= site_url('team') ?>">Kelompok</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('year') ?>">Thn-Pelajaran</a>
+      </li>
     </ul>
   </div>
 </nav>
