@@ -14,6 +14,9 @@
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 <!-- menggunakan flugin datatables.net menggunakan ID tabel -->
 <script>
+    $('#my-table').DataTable();
+</script>
+<script>
     $('#table-student').DataTable({
         order: [[1, 'asc']],
     });

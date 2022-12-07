@@ -18,7 +18,7 @@
 <form action="<?= site_url($target_url) ?>" method="POST">
     <div class="col-sm-12 col-md-6">
         <div class="form-group">
-            <label for="fullname">Nama Siswa</label>
+            <label for="fullname">Nama Lengkap</label>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
