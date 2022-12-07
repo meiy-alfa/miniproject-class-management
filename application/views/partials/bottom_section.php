@@ -21,6 +21,11 @@
         order: [[1, 'asc']],
     });
 </script>
+<script>
+    $('#table-group').DataTable({
+        order: [[2, 'asc'],[3, 'asc']],
+    });
+</script>
 
 
 <!-- flugin select2.org -->

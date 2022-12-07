@@ -20,6 +20,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= site_url('level') ?>">Tingkat</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('group') ?>">Group</a>
+      </li>
     </ul>
   </div>
 </nav>
