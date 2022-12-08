@@ -4,11 +4,11 @@
         public function get_all()
         {
             // mengambil database dengan metode join
-            $this->db->select('classes.*, years.year as tapel, vocations.code as kompetensi, teams.title as kelompok, levels.level as tingkat');
-            $this->db->from('classes');
-            $this->db->join('years','years.id = classes.year_id');
-            $this->db->join('groups','groups.id = classes.group_id');
-            $this->db->join('levels','levels.id = classes.level_id');
+            $this->db->select('class.*, years.year as tapel, vocations.code as kompetensi, teams.title as kelompok, levels.level as tingkat');
+            $this->db->from('class');
+            $this->db->join('years','years.id = class.year_id');
+            $this->db->join('groups','groups.id = class.group_id');
+            $this->db->join('levels','levels.id = class.level_id');
             $this->db->join('vocations','vocations.id = groups.vocation_id');
             $this->db->join('teams','teams.id = groups.team_id');
             $query = $this->db->get();
@@ -22,7 +22,7 @@
         {
             // mengambil database dengan where
             $this->db->where('id', $id);
-            $query = $this->db->get('classes');
+            $query = $this->db->get('class');
             // mengambil satu data menjadi array
             $result = $query->row();
             // return data untuk dapat dikirim
@@ -36,7 +36,7 @@
             $data['group_id']   = $this->input->post('group_id');
             $data['level_id']   = $this->input->post('level_id');
             // insert pada database
-            $this->db->insert('classes', $data);
+            $this->db->insert('class', $data);
         }
 
         public function update_item($id)
@@ -47,13 +47,13 @@
             $data['level_id']   = $this->input->post('level_id');
             // update pada database sesuai id
             $this->db->where('id', $id);
-            $this->db->update('classes', $data);
+            $this->db->update('class', $data);
         }
 
         public function delete_item($id)
         {
             // delete pada database sesuai id
             $this->db->where('id', $id);
-            $this->db->delete('classes');
+            $this->db->delete('class');
         }
     }

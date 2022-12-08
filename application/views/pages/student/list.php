@@ -45,8 +45,5 @@
                 ?>
             </tbody>
         </table>
-        <hr>
-        <a>Jumlah : 00 | Laki-laki : 00 | Perempuan : 00</a><br>
-
     </div>
 </div>
