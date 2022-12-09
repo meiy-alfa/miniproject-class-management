@@ -7,7 +7,7 @@
     $target_url = $is_edit ? "team/update_process/$item->id" : "team/create_process";
 ?>
 
-<h2 class="my-3"> <?= $is_edit ? "Edit" : "Tambah"; ?> Kelompok </h2>
+<h2 class="my-3"> <?= $is_edit ? "Edit" : "Tambah"; ?> Angkatan </h2>
 
 <?php if($is_error) : ?>
     <div class="alert alert-danger">
@@ -18,12 +18,12 @@
 <form action="<?= site_url($target_url) ?>" method="POST">
     <div class="col-sm-12 col-md-6">
         <div class="form-group">
-            <label for="title">Nama Kelompok</label>
+            <label for="title">Nama Angkatan</label>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="bi bi-bookmark-fill"></i></span>
                 </div>
-                <input type="text" class="form-control" id="title" placeholder="Nama Kelompok" name="title" value="<?= $is_error ? $this->session->inputs['title'] : ($is_edit ? $item->title : '') ?>">
+                <input type="text" class="form-control" id="title" placeholder="Nama Angkatan" name="title" value="<?= $is_error ? $this->session->inputs['title'] : ($is_edit ? $item->title : '') ?>">
             </div>
         </div>
     </div>

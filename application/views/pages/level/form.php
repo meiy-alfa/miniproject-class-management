@@ -23,7 +23,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="bi bi-clipboard2-data-fill"></i></span>
                 </div>
-                <input type="text" class="form-control" id="level" placeholder="Nama Tingkatan" name="level" value="<?= $is_error ? $this->session->inputs['level'] : ($is_edit ? $item->level : '') ?>">
+                <input type="text" class="form-control" id="level" placeholder="Nama Tingkatan | Contoh : XII" name="level" value="<?= $is_error ? $this->session->inputs['level'] : ($is_edit ? $item->level : '') ?>">
             </div>
         </div>
     </div>

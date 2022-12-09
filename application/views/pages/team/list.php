@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-between align-items-center">
-    <h2 class="my-4">Daftar Kelompok</h2>
-    <a href="<?= site_url('team/create') ?>" class="btn btn-primary" title="Tambah"><i class="bi bi-bookmark-fill"></i> Tambah Kelompok</a>
+    <h2 class="my-4">Daftar Angkatan</h2>
+    <a href="<?= site_url('team/create') ?>" class="btn btn-primary" title="Tambah"><i class="bi bi-bookmark-fill"></i> Tambah Angkatan</a>
 </div>
 
 <?php if ($this->session->message) { ?>
@@ -16,10 +16,10 @@
 
 <div class="container">
     <div class="col-sm-12 col-md-12">
-        <table class="table table-striped table-bordered" id="my-table">
+        <table class="table table-striped table-bordered" id="table-team">
             <thead>
                 <tr>
-                    <th><center>Kelompok</center></th>
+                    <th><center>Angkatan</center></th>
                     <th width="150px"><center>Action</center></th>
                 </tr>
             </thead>

@@ -77,7 +77,7 @@
 
         public function get_validate($redirect_url)
         {
-            $this->form_validation->set_rules('level', 'nama tingkatan', 'required|max_length[5]');
+            $this->form_validation->set_rules('level', 'nama tingkatan', 'required|max_length[5]|is_unique[levels.level]');
             $validation_result = $this->form_validation->run();
 
             if ($validation_result === false) {

@@ -78,7 +78,7 @@
         public function get_validate($redirect_url)
         {
             $this->form_validation->set_rules('name', 'nama kompetensi', 'required|min_length[5]|max_length[100]');
-            $this->form_validation->set_rules('code', 'kode kompetensi', 'required|min_length[2]|max_length[5]');
+            $this->form_validation->set_rules('code', 'kode kompetensi', 'required|min_length[2]|max_length[10]|is_unique[vocations.code]');
             $validation_result = $this->form_validation->run();
 
             if ($validation_result === false) {

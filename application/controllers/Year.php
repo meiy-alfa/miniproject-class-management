@@ -77,7 +77,7 @@
 
         public function get_validate($redirect_url)
         {
-            $this->form_validation->set_rules('year', 'tahun pelajaran', 'required|min_length[9]|max_length[9]');
+            $this->form_validation->set_rules('year', 'tahun pelajaran', 'required|min_length[9]|max_length[9]|is_unique[years.year]');
             $validation_result = $this->form_validation->run();
 
             if ($validation_result === false) {

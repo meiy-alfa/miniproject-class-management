@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-between align-items-center">
-    <h2 class="my-4">Daftar Group Kelas</h2>
-    <a href="<?= site_url('group/create') ?>" class="btn btn-primary" title="Tambah"><i class="bi bi-person-fill-gear"></i> Tambah Group</a>
+    <h2 class="my-4">Daftar Group</h2>
+    <a href="<?= site_url('group/create') ?>" class="btn btn-primary" title="Tambah"><i class="bi bi-person-fill-gear"></i> Seting Group</a>
 </div>
 
 <?php if ($this->session->message) { ?>
@@ -21,6 +21,7 @@
                 <tr>
                     <th width="100px"><center>NIS</center></th>
                     <th><center>Nama Siswa</center></th>
+                    <th width="100px"><center>Angkatan</center></th>
                     <th width="100px"><center>Group</center></th>
                     <th width="150px"><center>Action</center></th>
                 </tr>
@@ -32,7 +33,8 @@
                     <tr>
                         <td><center><?= $item->nis ?><center></td>
                         <td><?= $item->siswa ?></td>
-                        <td><center><?= $item->kompetensi."-".$item->kelompok ?></center></td>
+                        <td><center><?= $item->kelompok ?></center></td>
+                        <td><center><?= $item->kompetensi ?></center></td>
                         <td>
                             <center>
                                 <a href="<?= site_url("group/update/$item->id") ?>" class="btn btn-warning btn-sm" title="Edit"><i class="bi bi-pencil-fill"></i></a>

@@ -11,10 +11,10 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Atribut</a>
         <div class="dropdown-menu">
+          <a class="dropdown-item" href="<?= site_url('team') ?>">Angkatan</a>
           <a class="dropdown-item" href="<?= site_url('year') ?>">Tahun Pelajaran</a>
           <a class="dropdown-item" href="<?= site_url('vocation') ?>">Kompetensi</a>
           <a class="dropdown-item" href="<?= site_url('level') ?>">Tingkat</a>
-          <a class="dropdown-item" href="<?= site_url('team') ?>">Kelompok</a>
         </div>
       </li>
       <li class="nav-item dropdown">

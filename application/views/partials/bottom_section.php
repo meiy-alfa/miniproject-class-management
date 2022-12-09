@@ -18,12 +18,22 @@
 </script>
 <script>
     $('#table-student').DataTable({
-        order: [[1, 'asc']],
+        order: [[0, 'desc']],
+    });
+</script>
+<script>
+    $('#table-team').DataTable({
+        order: [[0, 'desc']],
+    });
+</script>
+<script>
+    $('#table-year').DataTable({
+        order: [[0, 'desc']],
     });
 </script>
 <script>
     $('#table-group').DataTable({
-        order: [[2, 'asc'],[3, 'asc']],
+        order: [[2, 'desc'],[3, 'asc']],
     });
 </script>
 <script>

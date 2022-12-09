@@ -23,16 +23,16 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="bi bi-signpost-2-fill"></i></span>
                 </div>
-                <input type="text" class="form-control" id="name" placeholder="Nama Kompetensi" name="name" value="<?= $is_error ? $this->session->inputs['name'] : ($is_edit ? $item->name : '') ?>">
+                <input type="text" class="form-control" id="name" placeholder="Nama Kompetensi | Contoh : Teknik Komputer dan jaringan" name="name" value="<?= $is_error ? $this->session->inputs['name'] : ($is_edit ? $item->name : '') ?>">
             </div>
         </div>
         <div class="form-group">
-            <label for="code">Code Kompetensi</label>
+            <label for="code">Code Kompetensi-Rombel</label>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="bi bi-upc"></i></span>
                 </div>
-                <input type="text" class="form-control" id="code" placeholder="code Kompetensi" name="code" value="<?= $is_error ? $this->session->inputs['code'] : ($is_edit ? $item->code : '') ?>">
+                <input type="text" class="form-control" id="code" placeholder="code Kompetensi | Contoh : TKJ-1" name="code" value="<?= $is_error ? $this->session->inputs['code'] : ($is_edit ? $item->code : '') ?>">
             </div>
         </div>
     </div>

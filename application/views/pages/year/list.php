@@ -16,7 +16,7 @@
 
 <div class="container">
     <div class="col-sm-12 col-md-12">
-        <table class="table table-striped table-bordered" id="my-table">
+        <table class="table table-striped table-bordered" id="table-year">
             <thead>
                 <tr>
                     <th><center>Tahun Pelajaran</center></th>

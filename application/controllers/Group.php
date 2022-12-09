@@ -88,7 +88,7 @@
 
         public function get_validate($redirect_url)
         {
-            $this->form_validation->set_rules('student_id', 'siswa', 'required');
+            $this->form_validation->set_rules('student_id', 'siswa', 'required|is_unique[groups.student_id]');
             $this->form_validation->set_rules('vocation_id', 'kompetensi', 'required');
             $this->form_validation->set_rules('team_id', 'kelompok kelas', 'required');
             $validation_result = $this->form_validation->run();

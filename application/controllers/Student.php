@@ -78,7 +78,7 @@
         public function get_validate($redirect_url)
         {
             $this->form_validation->set_rules('fullname', 'nama lengkap', 'required|min_length[2]|max_length[100]');
-            $this->form_validation->set_rules('nis', 'NIS', 'required|min_length[11]|max_length[11]');
+            $this->form_validation->set_rules('nis', 'NIS', 'required|min_length[11]|max_length[11]|is_unique[students.nis]');
             $this->form_validation->set_rules('gender', 'jenis kelamin', 'required');
             $validation_result = $this->form_validation->run();
 
