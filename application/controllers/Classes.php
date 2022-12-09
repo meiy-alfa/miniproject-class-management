@@ -6,7 +6,7 @@
             parent::__construct();
             $this->load->model('classes_model');
             $this->load->model('year_model');
-            $this->load->model('group_model');
+            $this->load->model('team_model');
             $this->load->model('level_model');
         }
 
@@ -30,7 +30,7 @@
             $data['page_title'] = "Tambah Kelas";
             // variabel model yang akan dijadikan option
             $data['year_options']   = $this->year_model->get_all();
-            $data['group_options']  = $this->group_model->get_all();
+            $data['team_options']  = $this->team_model->get_all();
             $data['level_options']  = $this->level_model->get_all();
             // mengambil halaman main.php sebagai akses menampilkan halaman
             $this->load->view('main', $data);
@@ -56,7 +56,7 @@
             $data['page_title'] = "Edit Kelas";
             // variabel model yang akan dijadikan option
             $data['year_options']   = $this->year_model->get_all();
-            $data['group_options']  = $this->group_model->get_all();
+            $data['team_options']  = $this->team_model->get_all();
             $data['level_options']  = $this->level_model->get_all();
             // variabel mengambil data dari model
             $data['item'] = $this->classes_model->get_item($id);
@@ -89,7 +89,7 @@
         public function get_validate($redirect_url)
         {
             $this->form_validation->set_rules('year_id', 'tahun pelajaran', 'required');
-            $this->form_validation->set_rules('group_id', 'group kelas', 'required');
+            $this->form_validation->set_rules('team_id', 'angkatan', 'required');
             $this->form_validation->set_rules('level_id', 'tingkat', 'required');
             $validation_result = $this->form_validation->run();
 

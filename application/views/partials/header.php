@@ -6,23 +6,25 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('team') ?>">Angkatan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('year') ?>">Tahun Pelajaran</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('level') ?>">Tingkat</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('vocation') ?>">Kompetensi</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="<?= site_url('student') ?>">Siswa</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Atribut</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="<?= site_url('team') ?>">Angkatan</a>
-          <a class="dropdown-item" href="<?= site_url('year') ?>">Tahun Pelajaran</a>
-          <a class="dropdown-item" href="<?= site_url('vocation') ?>">Kompetensi</a>
-          <a class="dropdown-item" href="<?= site_url('level') ?>">Tingkat</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('group') ?>">Group</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Seting</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="<?= site_url('group') ?>">Group</a>
-          <a class="dropdown-item" href="<?= site_url('classes') ?>">Kelas</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('classes') ?>">Kelas</a>
       </li>
     </ul>
   </div>

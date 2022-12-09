@@ -38,7 +38,7 @@
 </script>
 <script>
     $('#table-classes').DataTable({
-        order: [[0, 'desc'],[1, 'asc']],
+        order: [[0, 'desc'],[1, 'desc']],
     });
 </script>
 

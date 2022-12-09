@@ -20,6 +20,7 @@
             <thead>
                 <tr>
                     <th width="150px"><center>Tahun Pelajaran</center></th>
+                    <th width="150px"><center>Angkatan</center></th>
                     <th><center>Kelas</center></th>
                     <th width="150px"><center>Action</center></th>
                 </tr>
@@ -30,7 +31,8 @@
                 ?>
                     <tr>
                         <td><center><?= $item->tapel ?><center></td>
-                        <td><?= $item->tingkat."-".$item->kompetensi.'-'.$item->kelompok ?></td>
+                        <td><center><?= $item->angkatan ?></center></td>
+                        <td><center><?= $item->tingkat ?></center></td>
                         <td>
                             <center>
                                 <a href="<?= site_url("classes/update/$item->id") ?>" class="btn btn-warning btn-sm" title="Edit"><i class="bi bi-pencil-fill"></i></a>

@@ -18,6 +18,20 @@
 <form action="<?= site_url($target_url) ?>" method="POST">
     <div class="col-sm-12 col-md-6">
         <div class="form-group">
+            <label for="team_id">Angkatan</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-bookmark-fill"></i></span>
+                </div>
+                <select class="form-control" id="team_id" name="team_id">
+                    <option value="">--- Pilih Salah Satu ---</option>
+                    <?php foreach ($team_options as $team_opt) : ?>
+                        <option value="<?= $team_opt->id?>" <?= $is_edit && $item->team_id === $team_opt->id ? "selected" : '' ?>><?= $team_opt->title ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="year_id">Tahun Pelajaran</label>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -41,20 +55,6 @@
                     <option value="">--- Pilih Salah Satu ---</option>
                     <?php foreach ($level_options as $level_opt) : ?>
                         <option value="<?= $level_opt->id?>" <?= $is_edit && $item->level_id === $level_opt->id ? "selected" : '' ?>><?= $level_opt->level ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="group_id">Kelompok</label>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="bi bi-person-fill-gear"></i></span>
-                </div>
-                <select class="form-control" id="group_id" name="group_id">
-                    <option value="">--- Pilih Salah Satu ---</option>
-                    <?php foreach ($group_options as $group_opt) : ?>
-                        <option value="<?= $group_opt->id?>" <?= $is_edit && $item->group_id === $group_opt->id ? "selected" : '' ?>><?= $group_opt->kompetensi."-".$group_opt->kelompok ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
