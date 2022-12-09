@@ -1,6 +1,5 @@
 <div class="d-flex justify-content-between align-items-center">
-    <h2 class="my-4">Daftar Siswa Baru</h2>
-    <a href="<?= site_url('student/create') ?>" class="btn btn-primary" title="Tambah"><i class="bi bi-person-plus-fill"></i> Tambah Siswa</a>
+    <h2 class="my-4">Daftar Siswa Aktif</h2>
 </div>
 
 <?php if ($this->session->message) { ?>
@@ -22,6 +21,8 @@
                     <th width="100px"><center>NIS</center></th>
                     <th><center>Nama</center></th>
                     <th width="50px"><center>JK</center></th>
+                    <th width="150px"><center>Angkatan</center></th>
+                    <th width="150px"><center>Kelas</center></th>
                     <th width="150px"><center>Action</center></th>
                 </tr>
             </thead>
@@ -33,6 +34,8 @@
                         <td><center><?= $item->nis ?></center></td>
                         <td><?= $item->fullname ?></td>
                         <td><center><?= $item->gender ?></center></td>
+                        <td><center><?= $item->title ?></center></td>
+                        <td><?= $item->levs."-".$item->code ?></td>
                         <td>
                             <center>
                                 <a href="<?= site_url("student/update/$item->id") ?>" class="btn btn-warning btn-sm" title="Edit"><i class="bi bi-pencil-fill"></i></a>

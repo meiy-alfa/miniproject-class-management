@@ -4,6 +4,7 @@
         public function get_all()
         {
             // mengambil database
+            $this->db->order_by("year", "desc");
             $query = $this->db->get('years');
             // mengambil semua data menjadi array
             $result = $query->result();

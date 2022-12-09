@@ -31,7 +31,7 @@
             // variabel model yang akan dijadikan option
             $data['vocation_options']   = $this->vocation_model->get_all();
             $data['team_options']       = $this->team_model->get_all();
-            $data['student_options']    = $this->student_model->get_all();
+            $data['student_options']    = $this->student_model->get_new();
             // mengambil halaman main.php sebagai akses menampilkan halaman
             $this->load->view('main', $data);
         }

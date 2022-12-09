@@ -14,7 +14,19 @@
             // variabel nama judul tab yang akan ditampilkan
             $data['page_title'] = "Daftar Siswa";
             // mengambil data dari model
-            $data['items'] = $this->student_model->get_all();
+            $data['items'] = $this->student_model->get_new();
+            // mengambil halaman main.php sebagai akses menampilkan halaman
+            $this->load->view('main', $data);
+        }
+
+        public function s_active()
+        {
+            // variabel alamat halaman yang akan dibuka
+            $data['page_name']  = "student/list_active";
+            // variabel nama judul tab yang akan ditampilkan
+            $data['page_title'] = "Daftar Siswa Aktif";
+            // mengambil data dari model
+            $data['items'] = $this->student_model->get_active();
             // mengambil halaman main.php sebagai akses menampilkan halaman
             $this->load->view('main', $data);
         }

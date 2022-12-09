@@ -4,6 +4,7 @@
         public function get_all()
         {
             // mengambil database
+            $this->db->order_by("code", "asc");
             $query = $this->db->get('vocations');
             // mengambil semua data menjadi array
             $result = $query->result();
