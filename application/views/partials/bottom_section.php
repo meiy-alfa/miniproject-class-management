@@ -22,6 +22,16 @@
     });
 </script>
 <script>
+    $('#table-student-active').DataTable({
+        order: [[3, 'desc'],[4, 'asc']],
+    });
+</script>
+<script>
+    $('#table-absen').DataTable({
+        order: [[1, 'asc']],
+    });
+</script>
+<script>
     $('#table-team').DataTable({
         order: [[0, 'desc']],
     });

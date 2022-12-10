@@ -15,7 +15,7 @@
 
 <div class="container">
     <div class="col-sm-12 col-md-12">
-        <table class="table table-striped table-bordered" id="table-student">
+        <table class="table table-striped table-bordered" id="table-student-active">
             <thead>
                 <tr>
                     <th width="100px"><center>NIS</center></th>
