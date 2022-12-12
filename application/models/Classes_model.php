@@ -27,6 +27,21 @@
             return $result;
         }
 
+        public function get_team()
+        {
+            // mengambil database
+            $this->db->select("teams.id, teams.title");
+            $this->db->from('teams');
+            $this->db->join('groups', 'groups.team_id = teams.id');
+            $this->db->group_by("teams.id");
+            $this->db->order_by("title", "desc");
+            $query = $this->db->get();
+            // mengambil semua data menjadi array
+            $result = $query->result();
+            // return data untuk dapat dikirim
+            return $result;
+        }
+
         public function create_item()
         {
             // mengambil data dari method POST

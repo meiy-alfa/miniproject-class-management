@@ -21,13 +21,13 @@
         <a class="nav-link" href="<?= site_url('student') ?>">Siswa Baru</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= site_url('student/s_active') ?>">Siswa Aktif</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="<?= site_url('group') ?>">Group</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?= site_url('classes') ?>">Kelas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('student/s_active') ?>">Siswa Aktif</a>
       </li>
     </ul>
   </div>

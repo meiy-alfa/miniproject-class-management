@@ -30,7 +30,7 @@
             $data['page_title'] = "Tambah Kelas";
             // variabel model yang akan dijadikan option
             $data['year_options']   = $this->year_model->get_all();
-            $data['team_options']  = $this->team_model->get_all();
+            $data['team_options']  = $this->classes_model->get_team();
             $data['level_options']  = $this->level_model->get_all();
             // mengambil halaman main.php sebagai akses menampilkan halaman
             $this->load->view('main', $data);
