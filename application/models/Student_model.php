@@ -57,6 +57,54 @@
             return $result;
         }
 
+        public function get_absen()
+        {
+            // mengambil data dari method POST
+            $data['year_id']        = $this->input->post('year_id');
+            $data['level_id']       = $this->input->post('level_id');
+            $data['vocation_id']    = $this->input->post('vocation_id');
+            // mengambil database dengan metode join dan where
+            $this->db->select("students.*, vocations.code, levels.level");
+            $this->db->from('students');
+            $this->db->join('groups','groups.student_id = students.id');
+            $this->db->join('vocations','vocations.id = groups.vocation_id');
+            $this->db->join('teams','teams.id = groups.team_id');
+            $this->db->join('class','class.team_id = teams.id');
+            $this->db->join('levels','levels.id = class.level_id');
+            $this->db->join('years','years.id = class.year_id');
+            $this->db->where('class.year_id', $data['year_id']);
+            $this->db->where('class.level_id', $data['level_id']);
+            $this->db->where('groups.vocation_id', $data['vocation_id']);
+            $this->db->order_by('students.fullname', 'asc');
+            $query = $this->db->get();
+            $result = $query->result();
+            // return data untuk dapat dikirim
+            return $result;
+        }
+
+        public function get_absen_item()
+        {
+            // mengambil data dari method POST
+            $data['year_id']        = $this->input->post('year_id');
+            $data['level_id']       = $this->input->post('level_id');
+            $data['vocation_id']    = $this->input->post('vocation_id');
+            // mengambil database dengan metode join dan where
+            $this->db->select("vocations.code, levels.level, years.year");
+            $this->db->from('groups');
+            $this->db->join('vocations','vocations.id = groups.vocation_id');
+            $this->db->join('teams','teams.id = groups.team_id');
+            $this->db->join('class','class.team_id = teams.id');
+            $this->db->join('levels','levels.id = class.level_id');
+            $this->db->join('years','years.id = class.year_id');
+            $this->db->where('class.year_id', $data['year_id']);
+            $this->db->where('class.level_id', $data['level_id']);
+            $this->db->where('groups.vocation_id', $data['vocation_id']);
+            $query = $this->db->get();
+            $result = $query->row();
+            // return data untuk dapat dikirim
+            return $result;
+        }
+
         public function create_item()
         {
             // mengambil data dari method POST

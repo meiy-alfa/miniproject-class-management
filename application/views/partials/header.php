@@ -29,6 +29,9 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= site_url('student/s_active') ?>">Siswa Aktif</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('student/absen_option') ?>">Absen Kelas</a>
+      </li>
     </ul>
   </div>
 </nav>

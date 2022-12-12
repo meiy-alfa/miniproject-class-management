@@ -5,6 +5,9 @@
         {
             parent::__construct();
             $this->load->model('student_model');
+            $this->load->model('year_model');
+            $this->load->model('vocation_model');
+            $this->load->model('level_model');
         }
 
         public function index()
@@ -29,6 +32,33 @@
             $data['items'] = $this->student_model->get_active();
             // mengambil halaman main.php sebagai akses menampilkan halaman
             $this->load->view('main', $data);
+        }
+
+        public function absen()
+        {
+            // variabel alamat halaman yang akan dibuka
+            $data['page_name']  = "student/list_absen";
+            // variabel nama judul tab yang akan ditampilkan
+            $data['page_title'] = "Absen Kelas";
+            // mengambil data dari model
+            $data['items'] = $this->student_model->get_absen();
+            $data['items_id'] = $this->student_model->get_absen_item();
+            // mengambil halaman main.php sebagai akses menampilkan halaman
+            $this->load->view('main', $data);
+        }
+
+        public function absen_option()
+        {
+            // variabel alamat halaman yang akan dibuka
+            $data['page_name']  = "student/form_absen";
+            // variabel nama judul tab yang akan ditampilkan
+            $data['page_title'] = "Pilih Absen";
+            // variabel model yang akan dijadikan option
+            $data['year_options']       = $this->year_model->get_all();
+            $data['vocation_options']   = $this->vocation_model->get_all();
+            $data['level_options']      = $this->level_model->get_all();
+            // mengambil halaman main.php sebagai akses menampilkan halaman
+            $this->load->view('main', $data);            
         }
 
         public function create()
