@@ -8,6 +8,11 @@
             $this->load->model('vocation_model');
             $this->load->model('team_model');
             $this->load->model('student_model');
+
+            if (empty($this->session->user_id))
+            {
+                redirect('auth/login');
+            }
         }
 
         public function index()

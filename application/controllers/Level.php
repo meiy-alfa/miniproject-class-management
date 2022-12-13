@@ -5,6 +5,11 @@
         {
             parent::__construct();
             $this->load->model('level_model');
+
+            if (empty($this->session->user_id))
+            {
+                redirect('auth/login');
+            }
         }
 
         public function index()
