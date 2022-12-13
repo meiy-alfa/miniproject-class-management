@@ -57,5 +57,16 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <!-- menggunakan flugin select2 menggunakan ID -->
 <script>
-    $('#select-gender').select2()
+    $('#student_id').select2({
+        placeholder: "--- Pilih Salah Satu ---",
+        allowClear: true
+    });
+    $('#vocation_id').select2({
+        placeholder: "--- Pilih Salah Satu ---",
+        allowClear: true
+    });
+    $('#team_id').select2({
+        placeholder: "--- Pilih Salah Satu ---",
+        allowClear: true
+    });
 </script>

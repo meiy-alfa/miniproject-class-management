@@ -20,11 +20,8 @@
         <div class="form-group">
             <label for="student_id">Siswa</label>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                </div>
                 <select class="form-control" id="student_id" name="student_id">
-                    <option value="">--- Pilih Salah Satu ---</option>
+                    <option value=""></option>
                     <?php foreach ($student_options as $student_opt) : ?>
                         <option value="<?= $student_opt->id?>" <?= $is_error && $this->session->inputs['student_id'] === $student_opt->id ? "selected" : ($is_edit && $item->student_id === $student_opt->id ? "selected" : '') ?>><?= $student_opt->nis." / ".$student_opt->fullname ?></option>
                     <?php endforeach; ?>
@@ -34,11 +31,8 @@
         <div class="form-group">
             <label for="vocation_id">Kompetensi-Rombel</label>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="bi bi-signpost-2-fill"></i></span>
-                </div>
                 <select class="form-control" id="vocation_id" name="vocation_id">
-                    <option value="">--- Pilih Salah Satu ---</option>
+                    <option value=""></option>
                     <?php foreach ($vocation_options as $vocation_opt) : ?>
                         <option value="<?= $vocation_opt->id?>" <?= $is_error && $this->session->inputs['vocation_id'] === $vocation_opt->id ? "selected" : ($is_edit && $item->vocation_id == $vocation_opt->id ? "selected" : '') ?>><?= $vocation_opt->code ?></option>
                     <?php endforeach; ?>
@@ -48,11 +42,8 @@
         <div class="form-group">
             <label for="team_id">Angkatan</label>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="bi bi-bookmark-fill"></i></span>
-                </div>
                 <select class="form-control" id="team_id" name="team_id">
-                    <option value="">--- Pilih Salah Satu ---</option>
+                    <option value=""></option>
                     <?php foreach ($team_options as $team_opt) : ?>
                         <option value="<?= $team_opt->id?>" <?= $is_error && $this->session->inputs['team_id'] === $team_opt->id ? "selected" : ($is_edit && $item->team_id === $team_opt->id ? "selected" : '') ?>><?= $team_opt->title ?></option>
                     <?php endforeach; ?>
